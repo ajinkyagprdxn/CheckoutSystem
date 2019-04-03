@@ -13,7 +13,8 @@
     //fetching data in descending order (lastest entry first)
     $result = mysqli_query($mysqli, "select * from users_login_creds as ulc inner join user_profile as up on (ulc.id = up.u_id) where ulc.username='".$username."'"); // using mysqli_query instead    
     ?>     
-    <a href="index.php" class="link_backtohome" title="Back to home">Back to home</a><br/><br/>          
+    <a href="index.php" class="link_backtohome" title="Back to home">Back to home</a> | <a href="cartpage.php" class="link_cartpage" title="Shopping Cart">Shopping Cart</a>
+    <br/><br/>          
     <h2>USER PROFILE</h2>
     <?php 
     while($res = mysqli_fetch_array($result)) { ?>

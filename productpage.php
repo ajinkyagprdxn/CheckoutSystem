@@ -14,7 +14,8 @@
     $prod_id = substr($url, strrpos($url, '=') + 1);
     $result = mysqli_query($mysqli, "select * from product_details where p_id=$prod_id"); // using mysqli_query instead    
     ?>     
-    <a href="userprofile.php" class="link_userprofile" title="Profile">Profile</a><br/><br/>                
+    <a href="index.php" class="link_backtohome" title="Back to home">Back to home</a> | <a href="cartpage.php" class="link_cartpage" title="Shopping Cart">Shopping Cart</a>
+    <br/><br/>                
     <h2>PRODUCT INFORMATION</h2>
     <?php 
     while($res = mysqli_fetch_array($result)) { ?>
@@ -29,7 +30,7 @@
               <li><span class="prodinfo_description"><?php echo $res['p_description'] ?></span></li>
               <li><span class="prodinfo_price">Rs. <?php echo $res['p_price'] ?>/-</span></li>
               <li>
-                <a href="cartpage.php" title="Add to cart" class="btn-add-cart">Add to cart</a>
+                <a href="cartpage.php?id=<?php echo $res['p_id'] ?>" title="Add to cart" class="btn-add-cart">Add to cart</a>
               </li>
             </ul>
           </li>

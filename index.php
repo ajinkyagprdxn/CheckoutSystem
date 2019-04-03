@@ -13,7 +13,8 @@
     //fetching data in descending order (lastest entry first)
     $result = mysqli_query($mysqli, "select * from product_details"); // using mysqli_query instead    
     ?>     
-    <a href="userprofile.php" class="link_userprofile" title="Profile">Profile</a><br/><br/>                
+    <a href="userprofile.php" class="link_userprofile" title="Profile">Profile</a> | <a href="cartpage.php" class="link_cartpage" title="Shopping Cart">Shopping Cart</a>
+    <br/><br/>                
     <h2>AVAILABLE PRODUCTS</h2>
 
     <ul class="products_view">
